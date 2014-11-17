@@ -25,7 +25,7 @@ class Student
 end
 
 class B < Student
-	define_method(:barney, instance_method(:fred))
+	define_method(:has_unixoid?, instance_method(:fred))
 end
 
 a = B.new
@@ -35,4 +35,6 @@ a.create_method(:betty) { p self }
 a.betty
 a.create_method(:has_unixoid?) { puts @badges.include?('unixoid')}
 a.has_unixoid?
+b = Student.new
+b.lol
 
